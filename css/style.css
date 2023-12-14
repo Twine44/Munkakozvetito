@@ -1,0 +1,347 @@
+/* Style for all pages */
+
+/* Basic style */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: #F1DDCC;
+}
+
+body {
+    background-color: #F1DDCC;
+    font-family: 'Inter', sans-serif;
+    color: black;
+}
+
+a:link,
+a:active,
+a:visited,
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+::selection {
+    background-color: whitesmoke;
+}
+
+/* Basic elements, containers */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#previous-page {
+    border: 1px solid black;
+    max-width: fit-content;
+    padding: 6px;
+    margin-left: 5px;
+    background-color: black;
+}
+
+#previous-page a {
+    color: white !important;
+}
+
+.custom-form input, select{
+    width: 100%;
+    height: 30px;
+    background-color: transparent;
+    font-size: 17px;
+    border: 2px solid black;
+}
+
+.custom-form label {
+    font-size: 20px;
+}
+
+.custom-form button, #newJob-btn {
+    color: white;
+    padding: 13px;
+    background-color: black;
+    font-size: 15px;
+    font-weight: 600;
+    border: 2px solid black;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.custom-form button:hover,#newJob-btn:hover {
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    transition: 0.7s ease;
+}
+
+.custom-form button:not(hover), #newJob-btn:not(hover) {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: 0.7s ease;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="radio"]::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+input[type="radio"]:checked::before {
+    display: block;
+}
+
+input[type="checkbox"]::before {
+    content: '\2713'; /* Checkmark Unicode character */
+    font-size: 16px;
+    color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+input[type="checkbox"]:checked::before {
+    color: black;
+    display: block;
+}
+
+
+table,
+tr,
+td,
+th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td,
+th {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.table-container {
+    margin-bottom: 20px;
+}
+
+/* Login / Register */
+#logreg-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32vh;
+}
+
+#logreg-container h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#reglog-btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.mark {
+    font-size: 14px;
+    background-color: black;
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-radius: 10px;
+}
+
+.err-msg {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* User */
+#user-container {
+    max-width: fit-content;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+#logout {
+    color: white;
+}
+
+
+#user-table tr td:first-child {
+    background-color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+#user-table tr td:nth-child(2){
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#user-table a{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+
+#logout-td {
+    background-color: black !important;
+}
+
+#logout-td a{
+        height: max-content;
+        width: max-content;
+}
+
+#logout-img {
+    width: 15px;
+    margin-left: 3px;
+}
+
+/* Admin */
+.admin-options {
+    display: flex;
+    justify-content: center;
+}
+
+.admin-options div {
+    font-size: 20px;
+    border: 1px solid black;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 50px;
+}
+
+.admin-options div:hover {
+    background-color: black;
+    color: white;
+    transition: 0.7s ease;
+}
+
+.admin-options div:not(hover) {
+    background-color: transparent;
+    color: black;
+    transition: 0.7s ease;
+}
+
+#margin-top-wtitle {
+    margin-top: 15vh;
+}
+
+#margin-top-wtitle h2 {
+    margin-bottom: 50px;
+}
+
+#margin-top {
+    margin-top: 30vh;
+}
+
+/* Apply Course */
+.select-td {
+    background-color: black;
+    cursor: pointer;
+    transition: 0.7s ease;
+    border: 1px solid white;
+}
+
+.select-td a {
+    color: white;
+}
+
+.select-td button {
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+
+.select-td:hover,
+.select-td button:hover {
+    cursor: pointer;
+}
+
+/* Company */
+#comp-fieldset {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+}
+
+/* Jobs */
+#newJob-btn{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.addremoveItemBtn, #submitBtn{
+    margin-top: 10px;
+}
+#custom-jobtable td{
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+/* Courses */
+#course-form{
+    width: 400px;
+}
+
+/* Statistics */
+#oneYearUsers{
+    text-align: center;
+}
+#mostPopJobs{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+}
+#mostPopJobs table{
+    width: 400px;
+}
+.stat-title{
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
